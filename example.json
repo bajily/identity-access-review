@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "id": "finance",
+      "includes": [
+        "approvers"
+      ],
+      "permissions": [
+        "payments:create"
+      ]
+    },
+    {
+      "id": "approvers",
+      "includes": [],
+      "permissions": [
+        "payments:approve",
+        "tenant:admin"
+      ]
+    }
+  ],
+  "identities": [
+    {
+      "id": "synthetic-analyst",
+      "enabled": true,
+      "mfa": false,
+      "last_activity": "2026-01-01T00:00:00Z",
+      "groups": [
+        "finance"
+      ],
+      "permissions": []
+    }
+  ]
+}
